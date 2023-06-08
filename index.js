@@ -3,8 +3,11 @@ const express =require("express")
 const {connection}=require("./db")
 const {userroute}=require("./route/useroute")
 const {noteroute}=require("./route/noteroute")
+const cors =require("cors")
 const app=express()
+app.use(cors())
 app.use(express.json())
+
 require("dotenv").config()
 app.use("/user",userroute)
 
