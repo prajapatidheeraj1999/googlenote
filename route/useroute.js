@@ -51,7 +51,7 @@ userroute.post("/login",async(req,res)=>{
 
     }catch(error)
     {
-        res.send({"mas":"user not found"})
+        res.send({"mas":"user not found",email})
 
     }
 
